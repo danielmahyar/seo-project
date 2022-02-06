@@ -16,9 +16,9 @@ const ProductScreen = () => {
 
 				<meta property="og:type" content="website" />
 
-				<meta property="og:title" content={product.toString()} />
+				<meta property="og:title" content={product.toString() || ""} />
 
-				<meta property="og:description" content={"Specific item: " + product.toString()} />
+				<meta property="og:description" content={"Specific item: " + product.toString() || ""} />
 
 				<meta property="og:image" content="https://m.media-amazon.com/images/I/41tCIsGV8UL.jpg" />
 
