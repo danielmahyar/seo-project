@@ -107,7 +107,7 @@ interface ReactPhotoCollageComponentProps {
     showNumOfRemainingPhotos: boolean;
     openLightbox: any;
 }
-export const ReactPhotoCollageComponent: React.FC<ReactPhotoCollageComponentProps> = React.memo((props) => {
+export const ReactPhotoCollageComponent: React.FC<ReactPhotoCollageComponentProps> = (props) => {
     const { width, height, layout, layoutPhotoMaps, layoutNum, remainingNum, showNumOfRemainingPhotos, openLightbox } = props;
     return (
         <SC.PhotoCollage collageWidth={width}>
@@ -128,4 +128,4 @@ export const ReactPhotoCollageComponent: React.FC<ReactPhotoCollageComponentProp
             }
         </SC.PhotoCollage>
     );
-});
+};
