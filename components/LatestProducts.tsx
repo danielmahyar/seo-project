@@ -3,7 +3,7 @@ import FeaturedProductsGridItem from './FeaturedProductsGridItem';
 
 const LatestProducts = () => {
 	return (
-		<section className="w-full h-auto space-y-6 lg:px-44">
+		<section className="w-full lg:w-4/6 mx-auto h-auto space-y-6">
 			<h1 className="text-center font-bold text-4xl text-app-h1">Latest Products</h1>
 			<nav className="w-full">
 				<ul className="flex flex-col md:flex-row w-full items-center justify-center space-y-4 md:space-y-0 md:space-x-4">

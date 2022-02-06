@@ -1,12 +1,20 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { AiFillAlert, AiFillHeart, AiFillProfile, AiOutlineDown, AiOutlineMail, AiOutlinePhone, AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Header = () => {
+
+	const router = useRouter()
+
+	const handleShoppingCartClick = () => {
+		router.push("/cart")
+	}
+
 	return (
 		<header className="w-full">
 			<section className="bg-app-purple flex items-center p-2">
-				<div className="flex flex-col space-y-2 lg:flex-row lg:space-y-0 w-4/6 xl:w-5/6 mx-auto items-center justify-between">
+				<div className="flex flex-col space-y-2 lg:flex-row lg:space-y-0 w-4/6 mx-auto items-center justify-between">
 					<div className="flex items-center space-x-4">
 						<div className="flex items-center space-x-2">
 							<AiOutlineMail color="white"/>
@@ -27,18 +35,18 @@ const Header = () => {
 							<h3 className="text-white font-semibold">Wishlist</h3>
 							<AiFillHeart color="white"/>
 						</div>
-						<AiOutlineShoppingCart color="white"/>
+						<AiOutlineShoppingCart className="cursor-pointer" onClick={handleShoppingCartClick} color="white"/>
 					</div>
 
 				</div>
 			</section>
-			<section className="flex w-4/6 xl:w-5/6 mx-auto items-center justify-between py-4">
+			<section className="flex w-4/6 mx-auto items-center justify-between py-4">
 				<div className="flex w-full">
 					<h1 className="text-2xl text-center mr-0 font-bold lg:mr-12 xl:mr-36">Hekto</h1>
 					<nav className="hidden lg:block h-ful items-center">
 						<ul className="flex space-x-4 items-center h-full">
 							<Link href="/">Home</Link>
-							<Link href="/">Products</Link>
+							<Link href="/products/21312312">Products</Link>
 							<Link href="/">Blog</Link>
 							<Link href="/">Shop</Link>
 							<Link href="/">Contact</Link>

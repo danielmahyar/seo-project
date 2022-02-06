@@ -1,13 +1,17 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import ProductDescription from '../../components/products/ProductDescription';
 import ProductDetailHeader from '../../components/products/ProductDetailHeader';
 import ProductDetails from '../../components/products/ProductDetails';
 
 const ProductScreen = () => {
 	const router = useRouter()
 	const { product } = router.query
+	const queryValue = router.query["product"] || router.asPath.match(new RegExp(`[&?]${"product"}=(.*)(&|$)`))
+
 	return (
 		<>
 			<Head>
@@ -16,7 +20,7 @@ const ProductScreen = () => {
 
 				<meta property="og:type" content="website" />
 
-				<meta property="og:title" content={`${product}`} />
+				<meta property="og:title" content={`${queryValue}`} />
 
 				<meta property="og:description" content={`Specific item: ${product}`} />
 
@@ -46,8 +50,11 @@ const ProductScreen = () => {
 
 				<ProductDetails />
 
-				<p>{product}</p>
+				<ProductDescription />
+
 			</main>
+
+			<Footer />
 		</>
 	);
 };

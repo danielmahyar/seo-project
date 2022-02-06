@@ -23,7 +23,7 @@ module.exports = {
           DEFAULT: "#9DA0AE"
         },
         'app-light-bg': {
-          DEFAULT: "#F6F7FB"
+          DEFAULT: "#F9F8FE"
         },
         'app-btn-primary': {
           DEFAULT: "#FB2E86"

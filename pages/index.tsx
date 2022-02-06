@@ -8,7 +8,7 @@ import LatestProducts from '../components/LatestProducts'
 import MainPresentation from '../components/MainPresentation'
 import Offers from '../components/Offers'
 import SpecialSection from '../components/SpecialSection'
-
+// https://www.npmjs.com/package/react-fast-marquee
 const Home: NextPage = () => {
   return (
     <>
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
         <meta property="og:type" content="website" />
 
-        <meta property="og:title" content="VoFur" />
+        <meta property="og:title" content="VoClothes" />
 
         <meta property="og:description" content="Furniture from Vocast Production" />
 
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
         <meta property="og:url" content="PERMALINK" />
 
-        <meta property="og:site_name" content="SITE NAME" />
+        <meta property="og:site_name" content="VoClothes" />
 
         <meta name="twitter:title" content="TITLE OF POST OR PAGE" />
 
@@ -55,11 +55,18 @@ const Home: NextPage = () => {
 
         <SpecialSection />
 
-        <Footer />
 
       </main>
+
+      <Footer />
     </>
 
   )
 }
 export default Home
+
+export async function getStaticProps() {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}

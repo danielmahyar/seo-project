@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
 	return (
-		<footer className="w-full flex flex-col bg-app-main-bg">
-			<section className="w-full flex-1 px-4 grid gap-16 grid-rows-1  grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:w-10/12 mx-auto py-24">
+		<footer className="w-full flex flex-col bg-app-main-bg mt-10">
+			<section className="w-full flex-1 px-4 lg:px-0 grid gap-16 grid-rows-1  grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:w-4/6 mx-auto py-24">
 				<div className="space-y-2">
 					<h1 className="text-2xl font-bold">Hekto</h1>
 					<div className="flex flex-shrink-0">
